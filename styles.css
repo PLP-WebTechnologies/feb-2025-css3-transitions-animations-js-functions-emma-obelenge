@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Animation for Secret Button */
+@keyframes secret-animation {
+  0% {
+    transform: scale(1);
+    background-color: #4caf50;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #ffd700;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #4caf50;
+  }
+}
+
+#secret-btn {
+  animation: none;
+}
+
+#secret-btn.animate {
+  animation: secret-animation 1s infinite;
+}
+
+/* Image Animation */
+.gallery img {
+  width: 100px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+}
+
+#image-display {
+  display: none;
+}
